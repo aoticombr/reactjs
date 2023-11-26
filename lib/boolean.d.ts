@@ -1,0 +1,1 @@
+export function BooleanToText(value:boolean):string
