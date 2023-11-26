@@ -1,0 +1,29 @@
+{
+  "version": "0.1.26",
+  "license": "MIT",
+  "main": "index.js", 
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "deploy": "npm version patch && npm run build && npm publish"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "aotiexpress",
+  "author": "krobrelus",
+  "module": "dist/core.esm.js",  
+  "dependencies": {
+    "dateformat": "^5.0.3"
+  }
+}
