@@ -3,14 +3,11 @@
   "license": "MIT",
   "main": "index.js", 
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
     "deploy": "npm version patch && npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aoticombr/reactjs.git"
   },
   "peerDependencies": {
     "react": ">=16"
