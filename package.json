@@ -1,7 +1,7 @@
 {
-  "version": "0.1.26",
+  "version": "0.1.27",
   "license": "MIT",
-  "main": "index.js", 
+  "main": "index.js",
   "scripts": {
     "deploy": "npm version patch && npm run build && npm publish"
   },
@@ -19,7 +19,7 @@
   },
   "name": "aotiexpress",
   "author": "krobrelus",
-  "module": "dist/core.esm.js",  
+  "module": "dist/core.esm.js",
   "dependencies": {
     "dateformat": "^5.0.3"
   }
