@@ -1,6 +1,3 @@
-
-
-
 export function CheckNumberNull(value:any):boolean {
     return ((typeof(value)!=='number') &&(value===''));  
 }

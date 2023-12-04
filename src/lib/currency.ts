@@ -1,5 +1,3 @@
-
-
 export function localStringToNumber( s:string ):number {
   let var1 = Number( String( s ).replace( /[$]+/g, "" ) )
   let var2 = Number( String( var1).replace( /[^0-9.-]+/g, "" ) )
