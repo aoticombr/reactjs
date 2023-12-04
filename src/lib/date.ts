@@ -1,7 +1,7 @@
 import  dateFormat from 'dateformat';
 
 export function DtaHrToTextBr(pdata:Date):String {
-  let vdata = pdata;
+  let vdata = (new Date(pdata));
   const dia = String(vdata.getDate()).padStart(2, '0');
   const mes = String(vdata.getMonth() + 1).padStart(2, '0');
   const ano = vdata.getFullYear();
@@ -12,7 +12,7 @@ export function DtaHrToTextBr(pdata:Date):String {
   return dataFormatada
 }
 export function DtaToTextBr(pdata:Date):string {
-    let vdata = pdata;
+    let vdata = (new Date(pdata));
     return vdata.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
 }
 export function DtaToTextEn2(pdata:Date) { 
@@ -21,8 +21,8 @@ export function DtaToTextEn2(pdata:Date) {
   return  dateFormat(pdata, "dd/mm/yyyy");
 }
 
-export function IncDay(data:Date, qtde:number):Date{
-  let tomorrow = data;
+export function IncDay(pdata:Date, qtde:number):Date{
+  let tomorrow = (new Date(pdata));
   tomorrow.setDate(tomorrow.getDate() + qtde);
   return tomorrow;
 }
