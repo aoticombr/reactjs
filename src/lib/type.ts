@@ -1,4 +1,4 @@
-export function FieldTypes() {
+export function FieldTypes():any {
     return [
         {value:0, key:0, id:0, label:'Não Definido'},
         {value:1, key:1, id:1, label:'Data'},
@@ -10,8 +10,8 @@ export function FieldTypes() {
       ];
 }
 
-export function getLabel(carga,value) {   
-    const r =  carga.find((f) => {return Number(f.id) === Number(value)});
+export function getLabel(carga:any,value:Number):string {   
+    const r =  carga.find((f:any) => {return Number(f.id) === Number(value)});
     if (r){    
       return r.label;
     } else {

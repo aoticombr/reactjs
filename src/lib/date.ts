@@ -1,8 +1,7 @@
-import React, {useState, useEffect}  from 'react';
 import  dateFormat from 'dateformat';
 
-export function DtaHrToTextBr(pdata) {
-  let vdata = (new Date(pdata));
+export function DtaHrToTextBr(pdata:Date):String {
+  let vdata = pdata;
   const dia = String(vdata.getDate()).padStart(2, '0');
   const mes = String(vdata.getMonth() + 1).padStart(2, '0');
   const ano = vdata.getFullYear();
@@ -12,38 +11,38 @@ export function DtaHrToTextBr(pdata) {
   const dataFormatada = `${dia}/${mes}/${ano} ${hora}:${minuto}:${segundo}`;
   return dataFormatada
 }
-export function DtaToTextBr(pdata) {
-    let vdata = (new Date(pdata));
+export function DtaToTextBr(pdata:Date):string {
+    let vdata = pdata;
     return vdata.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
 }
-export function DtaToTextEn2(pdata) { 
+export function DtaToTextEn2(pdata:Date) { 
   if (!pdata) 
     return '';    
   return  dateFormat(pdata, "dd/mm/yyyy");
 }
 
-export function IncDay(data, qtde){
-  let tomorrow = new Date(data);
+export function IncDay(data:Date, qtde:number):Date{
+  let tomorrow = data;
   tomorrow.setDate(tomorrow.getDate() + qtde);
   return tomorrow;
 }
 
-export function DtaToTextEn(pdata) { 
+export function DtaToTextEn(pdata:Date):string { 
    if (!pdata) 
      return '';     
    return  dateFormat(pdata, "yyyy-mm-dd");
 }
 
-export function DtaHrToTextEn(pdata) { 
+export function DtaHrToTextEn(pdata:Date):string { 
   if (!pdata) 
     return '';    
   return  dateFormat(pdata, "yyyy-mm-ddThh:mm");
 }
 
-export function RecortDate(pdata) { 
+export function RecortDate(pdata:Date):string { 
   if (!pdata) 
     return '';  
-  let createdAt1 = new Date(pdata);
+  let createdAt1 = pdata;
   let createdAt2 = createdAt1.toISOString();
   let d = createdAt2.substr(0, 10);    
   return  d;

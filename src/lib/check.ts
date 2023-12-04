@@ -1,11 +1,11 @@
 
 
 
-export function CheckNumberNull(value) {
+export function CheckNumberNull(value:any):boolean {
     return ((typeof(value)!=='number') &&(value===''));  
 }
   
-export function CheckBoolNull(value) {
+export function CheckBoolNull(value:any):boolean {
     console.log('type='+typeof(value));
     console.log('value='+value);
     let aa = (typeof(value)==='boolean');
