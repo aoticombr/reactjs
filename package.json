@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/aoticombr/reactjs.git"
   },
+  "peerDependencies": {
+    "react": ">=16"
+  },
   "devDependencies": {
     "@types/dateformat": "^5.0.2",
     "typescript": "^5.3.2"
